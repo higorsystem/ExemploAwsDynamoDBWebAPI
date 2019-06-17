@@ -1,0 +1,14 @@
+C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\bin\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.deps.json
+C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\bin\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.runtimeconfig.json
+C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\bin\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.runtimeconfig.dev.json
+C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\bin\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.dll
+C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\bin\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.pdb
+C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.csprojAssemblyReference.cache
+C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.csproj.CoreCompileInputs.cache
+C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.RazorAssemblyInfo.cache
+C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.RazorAssemblyInfo.cs
+C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.AssemblyInfoInputs.cache
+C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.AssemblyInfo.cs
+C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.RazorTargetAssemblyInfo.cache
+C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.dll
+C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.pdb
