@@ -12,3 +12,17 @@ C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2
 C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.RazorTargetAssemblyInfo.cache
 C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.dll
 C:\Jorge Higor\NET\DynamoDB_AWS\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.pdb
+C:\Users\jorge.dsn.erp\Documents\GitHub\ExemploAwsDynamoDBWebAPI\ExemploAwsDynamoDBWebAPI\bin\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.deps.json
+C:\Users\jorge.dsn.erp\Documents\GitHub\ExemploAwsDynamoDBWebAPI\ExemploAwsDynamoDBWebAPI\bin\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.runtimeconfig.json
+C:\Users\jorge.dsn.erp\Documents\GitHub\ExemploAwsDynamoDBWebAPI\ExemploAwsDynamoDBWebAPI\bin\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.runtimeconfig.dev.json
+C:\Users\jorge.dsn.erp\Documents\GitHub\ExemploAwsDynamoDBWebAPI\ExemploAwsDynamoDBWebAPI\bin\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.dll
+C:\Users\jorge.dsn.erp\Documents\GitHub\ExemploAwsDynamoDBWebAPI\ExemploAwsDynamoDBWebAPI\bin\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.pdb
+C:\Users\jorge.dsn.erp\Documents\GitHub\ExemploAwsDynamoDBWebAPI\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.csprojAssemblyReference.cache
+C:\Users\jorge.dsn.erp\Documents\GitHub\ExemploAwsDynamoDBWebAPI\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.csproj.CoreCompileInputs.cache
+C:\Users\jorge.dsn.erp\Documents\GitHub\ExemploAwsDynamoDBWebAPI\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.RazorAssemblyInfo.cache
+C:\Users\jorge.dsn.erp\Documents\GitHub\ExemploAwsDynamoDBWebAPI\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.RazorAssemblyInfo.cs
+C:\Users\jorge.dsn.erp\Documents\GitHub\ExemploAwsDynamoDBWebAPI\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.AssemblyInfoInputs.cache
+C:\Users\jorge.dsn.erp\Documents\GitHub\ExemploAwsDynamoDBWebAPI\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.AssemblyInfo.cs
+C:\Users\jorge.dsn.erp\Documents\GitHub\ExemploAwsDynamoDBWebAPI\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.RazorTargetAssemblyInfo.cache
+C:\Users\jorge.dsn.erp\Documents\GitHub\ExemploAwsDynamoDBWebAPI\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.dll
+C:\Users\jorge.dsn.erp\Documents\GitHub\ExemploAwsDynamoDBWebAPI\ExemploAwsDynamoDBWebAPI\obj\Debug\netcoreapp2.2\ExemploAwsDynamoDBWebAPI.pdb

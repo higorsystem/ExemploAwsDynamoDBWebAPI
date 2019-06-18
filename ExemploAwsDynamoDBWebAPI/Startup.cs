@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Amazon.DynamoDBv2;
+using Amazon.Runtime;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,13 +29,17 @@ namespace ExemploAwsDynamoDBWebAPI
         {
             var dynamoDbConfig = Configuration.GetSection("DynamoDb");
             var runLocalDynamoDb = dynamoDbConfig.GetValue<bool>("LocalMode");
+            var credentials = Configuration.GetSection("AWS");
+            var accessKey = credentials.GetValue<string>("AccessKey");
+            var secretKey = credentials.GetValue<string>("SecretKey");
 
             if (runLocalDynamoDb)
             {
                 services.AddSingleton<IAmazonDynamoDB>(sp =>
                 {
+                    var credentialsAws = new BasicAWSCredentials(accessKey, secretKey);
                     var clientConfig = new AmazonDynamoDBConfig { ServiceURL = dynamoDbConfig.GetValue<string>("LocalServiceUrl") };
-                    return new AmazonDynamoDBClient(clientConfig);
+                    return new AmazonDynamoDBClient(credentialsAws, clientConfig);
                 });
             }
             else
@@ -58,7 +63,7 @@ namespace ExemploAwsDynamoDBWebAPI
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             app.UseMvc();
         }
         

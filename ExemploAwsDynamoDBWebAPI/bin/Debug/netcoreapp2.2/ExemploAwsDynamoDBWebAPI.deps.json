@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "signature": "f6e74eb8135d7cb2a4820b65aa42d66e68ce65ad"
   },
   "compilationOptions": {
     "defines": [
@@ -24,6 +24,8 @@
     ".NETCoreApp,Version=v2.2": {
       "ExemploAwsDynamoDBWebAPI/1.0.0": {
         "dependencies": {
+          "AWSSDK.DynamoDBv2": "3.3.101.24",
+          "AWSSDK.Extensions.NETCore.Setup": "3.3.100.1",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0"
@@ -33,6 +35,48 @@
         },
         "compile": {
           "ExemploAwsDynamoDBWebAPI.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.3.102.5": {
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.102.5"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {}
+        }
+      },
+      "AWSSDK.DynamoDBv2/3.3.101.24": {
+        "dependencies": {
+          "AWSSDK.Core": "3.3.102.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.DynamoDBv2.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.101.24"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AWSSDK.DynamoDBv2.dll": {}
+        }
+      },
+      "AWSSDK.Extensions.NETCore.Setup/3.3.100.1": {
+        "dependencies": {
+          "AWSSDK.Core": "3.3.102.5",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.100.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3236,6 +3280,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AWSSDK.Core/3.3.102.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FDNG20AlNOfI0KP9ZWRBbVpLWZwpNtUg5VtuiwZT5IrqtQUYU/NUJYvV/RkhRJxH08PTM/SxhyMafLUJsrNdYw==",
+      "path": "awssdk.core/3.3.102.5",
+      "hashPath": "awssdk.core.3.3.102.5.nupkg.sha512"
+    },
+    "AWSSDK.DynamoDBv2/3.3.101.24": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eV5rNsks/LPybIKFdHMgKZaXBjaJBtiApvX2yp0FRmp2+vKAckB3FrmTeSklJpypbjnxBQoWig5E5P9qoNMmsQ==",
+      "path": "awssdk.dynamodbv2/3.3.101.24",
+      "hashPath": "awssdk.dynamodbv2.3.3.101.24.nupkg.sha512"
+    },
+    "AWSSDK.Extensions.NETCore.Setup/3.3.100.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KrMhRur0x5X8sSkRSVKt7iEwdsMqu8sa5zqTOhaxEw52r/YaqiiRgw0hNcNCObpm2gQAASewlIVfaBitGjHlUw==",
+      "path": "awssdk.extensions.netcore.setup/3.3.100.1",
+      "hashPath": "awssdk.extensions.netcore.setup.3.3.100.1.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

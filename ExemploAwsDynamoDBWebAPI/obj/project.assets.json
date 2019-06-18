@@ -12228,11 +12228,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Jorge Higor\\NET\\DynamoDB_AWS\\ExemploAwsDynamoDBWebAPI\\ExemploAwsDynamoDBWebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\jorge.dsn.erp\\Documents\\GitHub\\ExemploAwsDynamoDBWebAPI\\ExemploAwsDynamoDBWebAPI\\ExemploAwsDynamoDBWebAPI.csproj",
       "projectName": "ExemploAwsDynamoDBWebAPI",
-      "projectPath": "C:\\Jorge Higor\\NET\\DynamoDB_AWS\\ExemploAwsDynamoDBWebAPI\\ExemploAwsDynamoDBWebAPI.csproj",
+      "projectPath": "C:\\Users\\jorge.dsn.erp\\Documents\\GitHub\\ExemploAwsDynamoDBWebAPI\\ExemploAwsDynamoDBWebAPI\\ExemploAwsDynamoDBWebAPI.csproj",
       "packagesPath": "C:\\Users\\jorge.dsn.erp\\.nuget\\packages\\",
-      "outputPath": "C:\\Jorge Higor\\NET\\DynamoDB_AWS\\ExemploAwsDynamoDBWebAPI\\obj\\",
+      "outputPath": "C:\\Users\\jorge.dsn.erp\\Documents\\GitHub\\ExemploAwsDynamoDBWebAPI\\ExemploAwsDynamoDBWebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
