@@ -4,24 +4,26 @@ using System.Linq;
 using System.Threading.Tasks;
 using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.Model;
+using ExemploAwsDynamoDBWebAPI.DTO;
+using ExemploAwsDynamoDBWebAPI.Parser;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExemploAwsDynamoDBWebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class CartaoController : ControllerBase
     {
-        private const string TableName = "DynamoDBAlterdataAnalise";      
+        private const string TableName = "Cartao";      
 
-        private List<ContratoPessoa> listaContratoPessoas;
+        private List<CartaoDTO> listaDtoCartao;
 
         private readonly IAmazonDynamoDB _amazonDynamoDb;
 
-        public ValuesController(IAmazonDynamoDB amazonDynamoDb)
+        public CartaoController(IAmazonDynamoDB amazonDynamoDb)
         {
             _amazonDynamoDb = amazonDynamoDb;
-            listaContratoPessoas = new List<ContratoPessoa>();
+            listaDtoCartao = new List<CartaoDTO>();
         }
 
         // GET api/values/init
@@ -48,7 +50,7 @@ namespace ExemploAwsDynamoDBWebAPI.Controllers
                         new AttributeDefinition
                         {
                             AttributeName = "Id",
-                            AttributeType = "N"
+                            AttributeType = "S"
                         }
                     },
                     KeySchema = new List<KeySchemaElement>
@@ -72,7 +74,7 @@ namespace ExemploAwsDynamoDBWebAPI.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<string>> Get(int id)
+        public async Task<ActionResult> Get(int id)
         {
             var request = new GetItemRequest
             {
@@ -85,20 +87,22 @@ namespace ExemploAwsDynamoDBWebAPI.Controllers
             if (!response.IsItemSet)
                 return NotFound();
 
-            return response.Item["Titulo"].S;
+            return Ok(CartaoParser.Parser(response.Item));
         }
 
         [HttpGet]
         [Route("all")]
-        public async Task<IActionResult> GetAll(int? id)
+        public async Task<IActionResult> GetAll()
         {
-            var queryRequest = RequestBuilder(id); 
+            var queryRequest = RequestBuilder(null); 
 
             var response = await ScanAsync(queryRequest);  
 
-            listaContratoPessoas.AddRange(response.Items.Select(Map));
+            var teste = response.Items;           
 
-            return Ok(listaContratoPessoas.OrderBy(x => x.Id).ToList());
+            listaDtoCartao.AddRange(response.Items.Select(Map));
+
+            return Ok(listaDtoCartao.OrderBy(x => x.Id).ToList());
         }
 
         private async Task<ScanResponse> ScanAsync(ScanRequest request)
@@ -108,14 +112,13 @@ namespace ExemploAwsDynamoDBWebAPI.Controllers
             return response;
         }
 
-        private ContratoPessoa Map(Dictionary<string, AttributeValue> result)
+        private CartaoDTO Map(Dictionary<string, AttributeValue> result)
         {
-            var objPessoa =  new ContratoPessoa
+            var objPessoa =  new CartaoDTO
             {
                 Id = Convert.ToInt32(result["Id"].N),
-                Titulo = result["Titulo"].S,
-                Nome = result["Nome"].S
-            };
+                Token = result["TokenCartao"].S
+            };               
 
             return objPessoa;
         }
@@ -126,39 +129,45 @@ namespace ExemploAwsDynamoDBWebAPI.Controllers
             {
                 return new ScanRequest
                 {
-                    TableName = "DynamoDBAlterdataAnalise"
+                    TableName = "Cartao"
                 };
             }
 
             return new ScanRequest
             {
-                TableName = "DynamoDBAlterdataAnalise",
+                TableName = "Cartao",
                 ExpressionAttributeValues = new Dictionary<string, AttributeValue> {
                     {
                         ":v_Id", new AttributeValue { N = id.ToString()}}
 
                 },
                 FilterExpression = "Id = :v_Id",
-                ProjectionExpression = "Id, Titulo, Nome"
+                ProjectionExpression = "Id, TokenCartao"
             };
         }
 
         // POST api/values
         [HttpPost]
-        public async Task Post([FromBody] ContratoPessoa input)
-        {            
+        public async Task Post([FromBody] CartaoDTO input)
+        {   
+            this.GerarIdAutomatico(input);
             var request = new PutItemRequest
             {
                 TableName = TableName,
                 Item = new Dictionary<string, AttributeValue>
                 {
                     { "Id", new AttributeValue { N = input.Id.ToString() }},
-                    { "Titulo", new AttributeValue { S = input.Titulo }},
-                    { "Nome", new AttributeValue { S = input.Nome }}
+                    { "TokenCartao", new AttributeValue { S = input.Token }}                    
                 }
             };
 
             await _amazonDynamoDb.PutItemAsync(request);
+        }
+
+        private void GerarIdAutomatico(CartaoDTO contrato)
+        {
+            Random rd = new Random();
+            contrato.Id = rd.Next(12, 1000000);                
         }
 
         // DELETE api/values/5
@@ -180,10 +189,8 @@ namespace ExemploAwsDynamoDBWebAPI.Controllers
         [Route("delete")]
         public async Task<IActionResult> DeleteAll()
         {
-            var queryRequest = RequestBuilder(null); 
-
+            var queryRequest = RequestBuilder(null);
             var response = await ScanAsync(queryRequest);  
-
             var deletado = await _amazonDynamoDb.DeleteTableAsync(TableName);
 
             return Ok(deletado);
